@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.videosharing.VideoSharingPlatformApplication;
+import com.videosharing.PlaybackServiceApplication;
 import com.videosharing.api.dto.UserPayload;
 import com.videosharing.model.User;
 import com.videosharing.service.IUserService;
@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("api/users")
 @AllArgsConstructor
 public final class UserController {
-	static final Logger log = LoggerFactory.getLogger(VideoSharingPlatformApplication.class);
+	static final Logger log = LoggerFactory.getLogger(PlaybackServiceApplication.class);
 	
 	@Autowired
     private IUserService userService;

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.videosharing.VideoSharingPlatformApplication;
+import com.videosharing.PlaybackServiceApplication;
 import com.videosharing.api.dto.PaymentPayload;
 import com.videosharing.model.Payment;
 import com.videosharing.service.IPaymentService;
@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("api/payments")
 @AllArgsConstructor
 public final class PaymentController {
-	static final Logger log = LoggerFactory.getLogger(VideoSharingPlatformApplication.class);
+	static final Logger log = LoggerFactory.getLogger(PlaybackServiceApplication.class);
 	
 	@Autowired
     private IPaymentService paymentService;

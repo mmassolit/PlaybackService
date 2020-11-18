@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.videosharing.VideoSharingPlatformApplication;
+import com.videosharing.PlaybackServiceApplication;
 import com.videosharing.api.dto.PlaybackPayload;
 import com.videosharing.model.Ad;
 import com.videosharing.model.Playback;
@@ -24,7 +24,7 @@ import java.util.List;
 @RequestMapping("api/playbacks")
 @AllArgsConstructor
 public final class PlaybackController {
-	static final Logger log = LoggerFactory.getLogger(VideoSharingPlatformApplication.class);
+	static final Logger log = LoggerFactory.getLogger(PlaybackServiceApplication.class);
 	private AdService adService;
 	
 	@Autowired

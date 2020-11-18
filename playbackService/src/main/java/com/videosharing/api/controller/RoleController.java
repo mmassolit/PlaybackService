@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.videosharing.VideoSharingPlatformApplication;
+import com.videosharing.PlaybackServiceApplication;
 import com.videosharing.api.dto.RolePayload;
 import com.videosharing.model.Role;
 import com.videosharing.service.IRoleService;
@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("api/roles")
 @AllArgsConstructor
 public final class RoleController {
-	static final Logger log = LoggerFactory.getLogger(VideoSharingPlatformApplication.class);
+	static final Logger log = LoggerFactory.getLogger(PlaybackServiceApplication.class);
 	
 	@Autowired
     private IRoleService roleService;
