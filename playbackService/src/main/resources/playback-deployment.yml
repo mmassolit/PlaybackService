@@ -1,0 +1,28 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playback
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: playback
+  template:
+    metadata:
+      labels:
+        app: playback
+    spec:
+      containers:
+        - image: mmassolit/playback
+          name: playback
+          ports:
+            - containerPort: 8087
+              name: playback
+          env:
+            - name: POSTGRES_ENDPOINT
+              value: "jdbc:postgresql://127.0.0.1:5432/playback_service"
+            - name: POSTGRES_PASSWORD
+              value: "123"
+            - name: POSTGRES_USERNAME
+              value: "video_sharing_test"
