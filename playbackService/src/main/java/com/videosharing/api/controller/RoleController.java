@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/roles")
+@RequestMapping("/role")
 @AllArgsConstructor
 public final class RoleController {
 	static final Logger log = LoggerFactory.getLogger(PlaybackServiceApplication.class);

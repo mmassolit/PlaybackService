@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/videos")
+@RequestMapping("/video")
 @AllArgsConstructor
 public final class VideoController {
 	static final Logger log = LoggerFactory.getLogger(PlaybackServiceApplication.class);
