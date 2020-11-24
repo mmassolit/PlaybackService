@@ -6,14 +6,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.videosharing.api.dto.PlaybackPayload;
 import com.videosharing.model.Ad;
-import com.videosharing.model.Payment;
 import com.videosharing.model.Playback;
 import com.videosharing.model.User;
 import com.videosharing.model.Video;
@@ -37,12 +32,7 @@ public class PlaybackService implements IPlaybackService {
     public List<Playback> findAll() {
         return (List<Playback>) repository.findAll();
     }
-    
-    @Override
-    public Page<Playback> findPaginated(int page, int size) {
-        return repository.findAll(PageRequest.of(page, size, Sort.by("dateCreated")));
-    }
-    
+
     @Override
     public Playback save(Playback playbackForSave) {
         return repository.save(playbackForSave);

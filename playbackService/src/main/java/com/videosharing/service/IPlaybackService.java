@@ -12,8 +12,6 @@ import javassist.NotFoundException;
 public interface IPlaybackService {
 	List<Playback> findAll();
 
-	Page<Playback> findPaginated(int page, int size);
-	
     Playback save(Playback playbackForSave);
     
     Playback getById(String videoId) throws NotFoundException;

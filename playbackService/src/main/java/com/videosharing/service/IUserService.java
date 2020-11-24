@@ -12,9 +12,7 @@ import javassist.NotFoundException;
 
 public interface IUserService {
 	List<User> findAll();
-	
-	Page<User> findPaginated(int page, int size);
-	
+
 	User save(User userForSave);
     
 	User getById(String userId) throws NotFoundException;

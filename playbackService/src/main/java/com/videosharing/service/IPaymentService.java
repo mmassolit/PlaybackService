@@ -13,8 +13,6 @@ import javassist.NotFoundException;
 public interface IPaymentService {
 	List<Payment> findAll();
 
-	Page<Payment> findPaginated(int page, int size);
-	
 	Payment save(Payment paymentForSave);
     
 	Payment getById(String paymentId) throws NotFoundException;

@@ -6,9 +6,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.videosharing.model.Role;
@@ -26,11 +23,6 @@ public class RoleService implements IRoleService {
     @Override
     public List<Role> findAll() {
         return (List<Role>) repository.findAll();
-    }
-    
-    @Override
-    public Page<Role> findPaginated(int page, int size) {
-        return repository.findAll(PageRequest.of(page, size, Sort.by("dateCreated")));
     }
 
     @Override

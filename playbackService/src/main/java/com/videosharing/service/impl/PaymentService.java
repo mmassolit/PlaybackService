@@ -6,13 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.videosharing.api.dto.PaymentPayload;
-import com.videosharing.model.Ad;
 import com.videosharing.model.Payment;
 import com.videosharing.model.User;
 import com.videosharing.repository.PaymentRepository;
@@ -31,11 +26,6 @@ public class PaymentService implements IPaymentService {
     @Override
     public List<Payment> findAll() {
         return (List<Payment>) repository.findAll();
-    }
-    
-    @Override
-    public Page<Payment> findPaginated(int page, int size) {
-        return repository.findAll(PageRequest.of(page, size, Sort.by("dateCreated")));
     }
     
     @Override

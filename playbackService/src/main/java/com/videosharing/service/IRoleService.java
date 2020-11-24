@@ -12,8 +12,6 @@ import javassist.NotFoundException;
 public interface IRoleService {	
 	List<Role> findAll();
 
-	Page<Role> findPaginated(int page, int size);
-	
     Role save(Role adForSave);
     
     Role getById(String adId) throws NotFoundException;
